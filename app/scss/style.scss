@@ -9,53 +9,5 @@
 @import '../components/banner-section/banner-section';
 @import '../components/footer/footer';
 @import '../components/search/search';
+@import '../components/categories/categories';
 
-.categories {
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    &__item {
-        width: 370px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 3px;
-        border: 1px solid #cdcdcd;
-        padding: 20px;
-        margin-bottom: 30px;
-    }
-
-    &__item-info {
-        width: 50%;
-    }
-
-    &__item-title {
-        @extend %barlow-bold;
-        font-size: 23px;
-        color: $default;
-        margin-bottom: 52px;
-    }
-    &__item-text {
-        font-size: 14px;
-        position: relative;
-        &::after {
-            content: '>';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 6px;
-            height: 9px;
-        }
-    }
-    &__item-img {
-        width: 50%;
-        text-align: center;
-    }
-
-    &__item-img img {
-        max-width: 100%;
-    }
-}
