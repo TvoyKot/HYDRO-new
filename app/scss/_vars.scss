@@ -1,1 +1,24 @@
+$default: #2F3035;
+$accent: #1C62CD;
+$bg: #F0F0F4;
 
+%pro-regular {
+    font-family: 'SFProDisplay-Regular', serif;
+    font-weight: 400;
+}
+%pro-medium {
+    font-family: 'SFProDisplay-Medium', serif;
+    font-weight: 500;
+}
+%pro-semibold {
+    font-family: 'SFProDisplay-Semibold', serif;
+    font-weight: 600;
+}
+%pro-bold {
+    font-family: 'SFProDisplay-Bold', serif;
+    font-weight: 700;
+}
+%barlow-bold {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+}

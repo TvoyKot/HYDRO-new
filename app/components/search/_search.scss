@@ -1,0 +1,44 @@
+.search {
+    &__tabs {
+        margin-bottom: 25px;
+    }
+    &__tabs-item {
+        padding: 12px 26px;
+    }
+    &__tabs-item--active {
+        @extend %pro-bold;
+        border-radius: 5px;
+        background-color: $bg;
+    }
+    &__content-item {
+        display: none;
+    }
+    &__content-item--active {
+        display: block;
+    }
+    &__content-form {
+        display: flex;
+    }
+    &__content-input {
+        width: 100%;
+        padding: 15px 20px;
+        border-radius: 3px;
+        background-color: $bg;
+        &::placeholder {
+            @extend %pro-regular;
+            font-size: 16px;
+            color: #656464;
+            line-height: 19px
+        }
+    }
+    &__content-btn {
+        @extend %pro-bold;
+        font-size: 14px;
+        color: #fff;
+        padding: 18px 41px;
+        margin-left: -3px;
+        text-transform: uppercase;
+        border-radius: 3px;
+        background-color: $accent;
+    }
+}

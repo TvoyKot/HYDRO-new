@@ -1,6 +1,5 @@
 html{
   box-sizing: border-box;
-  word-break: break-all;
 }
 
 *,
@@ -41,9 +40,8 @@ li {
   list-style: none;
 }
 
-img {
-  max-width: 100%;
-  display: inline-block;
+img[class] {
+  object-fit: cover;
 }
 
 input,
