@@ -57,26 +57,34 @@ function images() {
 }
 
 function sprite() {
-    return src('app/images/src/svg/*.svg')
-        .pipe(svgMin({
-            js2svg: {
-                pretty: true
-            }
-        }))
-        .pipe(replace('&gt;', '>'))
-        .pipe(svgSprite({
-            mode: {
-                symbol: {
-                    sprite: "../sprite.svg",
-                    render: {
-                        scss: {
-                            dest: '../../scss/_sprite.scss'
-                        }
-                    }
-                }
-            }
-        }))
-        .pipe(dest('app/images'))
+    return src('app/images/svgElements/*.svg')
+    .pipe(svgMin({
+        js2svg: {
+            pretty: true
+        }
+    }))
+    .pipe(cheerio({
+        run: function ($) {
+            $('[fill]').removeAttr('fill');
+            $('[stroke]').removeAttr('stroke');
+            $('[style]').removeAttr('style');
+        },
+        parserOptions: {xmlMode: true}
+    }))
+    .pipe(replace('&gt;', '>'))
+    .pipe(svgSprite({
+			mode: {
+				symbol: {
+					sprite: "../sprite.svg",
+					render: {
+						scss: {
+							dest:'../../scss/_sprite.scss'
+						}
+					}
+				}
+			}
+		}))
+    .pipe(dest('app/images'))
 }
 
 function styles() {

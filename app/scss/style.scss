@@ -11,3 +11,56 @@
 @import '../components/search/search';
 @import '../components/categories/categories';
 
+
+.product {
+    &__item-wrapper {
+        width: 271px;
+        position: relative;
+    }
+    &__item {
+        text-align: center;
+        padding: 52px 20px 31px;
+        border-radius: 3px;
+        border: 1px solid #cdcdcd;
+    }
+    &__item-favorite {
+        position: absolute;
+        width: 24px;
+        height: 22px;
+        top: 16px;
+        right: 19px;
+        background-color: transparent;
+        z-index: 5;
+        cursor: pointer;
+        &::before {
+            display: none;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 24px;
+            height: 22px;
+            background-image: url(../images/svgElements/heart-active.svg)
+        }
+    }
+    &__item-favorite--active::before {
+        display: block;
+    }
+    &__item-title {
+        @extend %pro-regular;
+        margin: 14px 0 25px;
+    }
+    &__item-price {
+        @extend %barlow-bold;
+        font-size: 30px;
+    }
+    &__item-basket {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 10px 8px 0 14px;
+        border-radius: 10px 0 0 0;
+        background-color: $accent;
+        cursor: pointer;
+    }
+}

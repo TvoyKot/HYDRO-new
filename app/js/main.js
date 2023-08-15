@@ -15,5 +15,9 @@ $(function () {
 
         $($(this).attr('href')).addClass('tabs-content--active');
     });
+
+    $('.product__item-favorite').on('click', function() {
+        $('.product__item-favorite').toggleClass('product__item-favorite--active');
+    })
 });
 
