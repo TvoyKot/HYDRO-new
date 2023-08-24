@@ -102,7 +102,7 @@ function  scripts() {
         'node_modules/slick-slider/slick/slick.js',
         'node_modules/rateyo/min/jquery.rateyo.min.js',
         'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
-        'node_modules/rangeslider-js/dist/rangeslider-js.min.js',
+        'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))

@@ -28,5 +28,17 @@ $(function () {
     })
 
     $('.filter-style').styler();
+
+    $('.filter__item-drop, .filter__extra').on('click', function()  {
+        $(this).toggleClass('filter__item-drop--active');
+        $(this).next().slideToggle(200);
+    });
+
+    $('.js-range-slider').ionRangeSlider({
+        type: 'double',
+        min: 100000,
+        max: 500000,
+    });
+
 });
 
