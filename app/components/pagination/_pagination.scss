@@ -1,0 +1,29 @@
+.pagination {
+    width: 100%;
+    margin-top: 70px;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__list-item {
+        @extend %barlow-medium;
+        font-size: 18px;
+        color: #c4c4c4;
+        padding: 6px 12px;
+        border: 2px solid transparent;
+        margin: 0 4px;
+    }
+
+    &__list-item.active {
+        @extend %barlow-bold;
+        border: 2px solid $accent;
+        color: $accent;
+    }
+
+    &__list-item a {
+        display: block;
+    }
+}

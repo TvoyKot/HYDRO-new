@@ -1,0 +1,112 @@
+.card__tabs {
+    margin-bottom: 100px;
+    &-box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 22px 0;
+        margin-bottom: 50px;
+        background: $bg;
+    }
+
+    .card__tab {
+        opacity: 0.6;
+        padding-bottom: 5px;
+        border-bottom: 2px solid transparent;
+    }
+
+    .card__tab.tab--active {
+        opacity: 1;
+        border-bottom: 2px solid $accent;
+    }
+
+    .card__top-line {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+
+    .card__label-search,
+    .card__label-pickup {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: rgba(47, 48, 53, .7);
+        ;
+        font-size: 17px;
+    }
+
+    .card__label-pickup {
+        margin-left: 54px;
+    }
+
+    .card__input-search {
+        padding: 9px 17px 9px 17px;
+        margin-right: 100px;
+        border-radius: 3px;
+        border: none;
+        background: #F0F0F4;
+
+        &::placeholder {
+            color: $default;
+            @extend %pro-regular;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    .card__list-item {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        padding: 20px 0;
+        color: rgba($color: $default, $alpha: 0.7);
+        line-height: 22px;
+        border-bottom: 1px solid rgba($color: $default, $alpha: 0.1);
+    }
+
+    .card__list-itemtitle {
+        font-size: 20px;
+        line-height: 20px;
+        color: rgb(47, 48, 53);
+    }
+
+    .card__list-address {
+        width: 220px;
+        margin-right: 80px;
+    }
+
+    .card__list-workhours {
+        width: 156px;
+        margin-right: 96px;
+    }
+    .workhours {
+        display: flex;
+        justify-content: space-between;
+    }
+    .card__list-avialable {
+        width: 140px;
+        margin-right: 60px;
+    }
+
+    .card__list-num {
+        width: 104px;
+    }
+
+    .card__list-btn {
+        margin-left: auto;
+    }
+
+    .card__list-btn button {
+        width: 140px;
+        padding: 10px 40px;
+        color: #fff;
+        color: var(--, #FFF);
+        font-size: 13px;
+        letter-spacing: 1.56px;
+        text-transform: uppercase;
+        border-radius: 3px;
+        background-color: $accent;
+    }
+}

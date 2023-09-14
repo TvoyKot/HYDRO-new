@@ -1,0 +1,131 @@
+.product-card {
+    margin-bottom: 80px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__img-box {
+        width: 500px;
+        padding-top: 64px;
+        text-align: center;
+        position: relative;
+    }
+
+    &__img-box::before {
+        padding: 13px 26px;
+        line-height: 18px;
+        font-size: 15px;
+        border-radius: 3px;
+    }
+
+    &__price-old {
+        display: inline-block;
+        color: #000;
+        @extend %barlow-medium;
+        font-size: 30px;
+        line-height: 44px;
+        opacity: 0.6;
+        background-image: url(../images/svgElements/old-line.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__price-new {
+        @extend %barlow-bold;
+        font-size: 40px;
+        line-height: normal;
+        margin-bottom: 17px;
+    }
+
+    &__link {
+        color: $accent;
+        font-size: 15px;
+        line-height: normal;
+    }
+
+    &__content {
+        width: 570px;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    &__code {
+        font-size: 15px;
+        line-height: normal;
+        margin-bottom: 22px;
+        opacity: 0.6;
+    }
+
+    &__buttons {
+        margin-bottom: 50px;
+    }
+    &__buttons a + a {
+        margin-left: 30px;
+    }
+    &__tab {
+        @extend %pro-medium;
+        font-size: 20px;
+        line-height: 24px;
+        padding-right: 17px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        opacity: 0.6;
+        border-bottom: 2px solid transparent;
+        position: relative;
+    }
+
+    &__tab+.product-card__tab {
+        padding-left: 17px;
+        padding-right: 0;
+    }
+
+    &__tab.tab--active {
+        @extend %pro-bold;
+        opacity: 1;
+        border-bottom: 2px solid $accent;
+    }
+
+    &__list {
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0 6px;
+        border-bottom: 1px solid rgba($color: $default, $alpha: 0.1);
+    }
+
+    &__item-left {
+        padding-right: 15px;
+    }
+
+    &__item-right {
+        width: 125px;
+    }
+
+    &__more {
+        color: $accent;
+        font-size: 14px;
+        padding-bottom: 0;
+        margin-bottom: 45px;
+        border-bottom: 1px solid $accent;
+    }
+
+    &__btn {
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 16px 53px;
+        border-radius: 3px;
+        background-color: $accent;
+        cursor: pointer;
+    }
+}

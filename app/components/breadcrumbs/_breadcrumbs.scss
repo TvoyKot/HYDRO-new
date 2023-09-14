@@ -1,0 +1,30 @@
+.breadcrumbs {
+    margin-bottom: 40px;
+
+    &__list-item {
+        display: inline-block;
+        font-size: 15px;
+        line-height: 18px;
+        color: #c4c4c4;
+        padding-right: 16px;
+        margin-right: 10px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            right: 0;
+            width: 6px;
+            height: 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(../images/svgElements/breadcrumbs-arrow.svg);
+        }
+    }
+
+    &__list-item:last-child::after {
+        display: none;
+    }
+}
