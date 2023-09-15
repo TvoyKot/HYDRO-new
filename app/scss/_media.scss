@@ -1,0 +1,114 @@
+@media (max-width: 1200px) {
+    .banner-section {
+        &__inner {
+            justify-content: space-around;
+        }
+        &__slider {
+            max-width: 600px;
+        }
+        &__slider-item-img {
+            max-width: 600px;
+            min-height: 360px;
+        }
+    }
+}
+@media (max-width: 1100px) {
+    .header {
+        .menu {
+            &__item+.menu__item {
+                padding-left: 20px;
+            }
+        }
+
+        &__adress {
+            margin-right: 20px;
+        }
+    }
+
+}
+
+@media (max-width: 968px) {
+    .header {
+        .menu {
+            &__list {
+                display: none;
+            }
+
+            &__btn {
+                display: block;
+                cursor: pointer;
+            }
+
+            &__btn-line {
+                width: 34px;
+                height: 3px;
+                border-radius: 3px;
+                background-color: $default;
+                margin: 8px 0;
+            }
+        }
+
+        &__bottom {
+            display: none;
+        }
+
+        .menu-mobile__linewrapper {
+            display: block;
+            overflow-x: scroll;
+            background-color: #f0f0f4;
+            .menu-mobile__line {
+                width: 450px;
+                padding: 14px 0 14px 15px;
+                .menu__link {
+                    font-family: 'SFProDisplay-Bold', serif;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .header {
+        &__adress {
+            display: none;
+        }
+
+        .menu-mobile {
+            &__list {
+                display: block;
+                width: 243px;
+                box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+                transition: all .3s;
+                transform: translateX(-110%);
+                background-color: #fff;
+                position: absolute;
+                z-index: 10;
+            }
+
+            &__item {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+                position: relative;
+            }
+
+            &__link {
+                display: block;
+                padding-top: 36px;
+                padding-left: 53px;
+            }
+
+            &__img {
+                position: absolute;
+                left: 11px;
+                bottom: 0;
+            }
+
+            &__list--active {
+                transform: translateX(0%);
+            }
+        }
+    }
+
+}

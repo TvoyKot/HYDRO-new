@@ -1,5 +1,6 @@
 .header {
     margin-bottom: 80px;
+
     &__top-inner {
         min-height: 122px;
         display: flex;
@@ -7,15 +8,18 @@
         align-items: center;
         @extend %pro-bold;
     }
+
     &__box {
         display: flex;
         align-items: center;
     }
+
     &__adress {
         width: 265px;
         padding-left: 30px;
         margin-right: 60px;
         position: relative;
+
         &::before {
             content: '';
             position: absolute;
@@ -26,23 +30,42 @@
             background-image: url('../images/svgElements/target-map.svg');
         }
     }
+
     .menu {
+        &__btn {
+            display: none;
+        }
+
         &__item {
             display: inline-block;
-            & + .menu__item {
+
+            &+.menu__item {
                 padding-left: 50px;
             }
         }
     }
+
+    .menu-mobile {
+        &__list {
+            display: none;
+        }
+        &__linewrapper {
+            display: none;
+        }
+    }
+
     .user-list {
         margin-right: 10px;
+
         &__item {
             display: inline-block;
             padding-right: 10px;
         }
+
         &__link {
             position: relative;
         }
+
         .trolley-icon {
             &__num {
                 position: absolute;
@@ -59,22 +82,26 @@
             }
         }
     }
+
     &__bottom {
         .menu-categories {
             display: flex;
             justify-content: space-around;
             background-color: $bg;
+
             &__link {
-                @extend %pro-regular; 
+                @extend %pro-regular;
                 color: $default;
-                font-size: 20px;      
+                font-size: 20px;
                 padding: 15px 0 14px;
                 text-transform: capitalize;
                 transition: all .3s;
                 position: relative;
+
                 &:hover {
                     color: #000000;
                 }
+
                 &::before {
                     position: absolute;
                     content: '';
@@ -86,6 +113,7 @@
                     background-color: $accent;
                     transition: all .3s;
                 }
+
                 &:hover::before {
                     width: 100%;
                     right: auto;

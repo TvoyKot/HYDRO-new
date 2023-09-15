@@ -5,6 +5,7 @@
 @import 'global';
 @import 'sprite';
 
+
 @import '../components/header/header';
 @import '../components/banner-section/banner-section';
 @import '../components/banner/banner';
@@ -34,3 +35,5 @@
 .rate {
     display: inline-block;
 }
+
+@import 'media';

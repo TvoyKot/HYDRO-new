@@ -4,6 +4,7 @@ body {
   scroll-behavior: smooth;
 }
 body {
+  min-width: 320px;
   color: $default;
   @extend %pro-regular;
   font-size: 20px;
