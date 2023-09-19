@@ -3,15 +3,26 @@
         &__inner {
             justify-content: space-around;
         }
+
         &__slider {
             max-width: 600px;
         }
+
         &__slider-item-img {
             max-width: 600px;
             min-height: 360px;
         }
     }
 }
+
+@media (max-width: 1160px) {
+    .categories {
+        &__inner {
+            justify-content: space-around;
+        }
+    }
+}
+
 @media (max-width: 1100px) {
     .header {
         .menu {
@@ -29,6 +40,8 @@
 
 @media (max-width: 968px) {
     .header {
+        margin-bottom: 40px;
+
         .menu {
             &__list {
                 display: none;
@@ -56,9 +69,11 @@
             display: block;
             overflow-x: scroll;
             background-color: #f0f0f4;
+
             .menu-mobile__line {
                 width: 450px;
                 padding: 14px 0 14px 15px;
+
                 .menu__link {
                     font-family: 'SFProDisplay-Bold', serif;
                     font-weight: 700;
@@ -68,7 +83,34 @@
             }
         }
     }
+
+    .banner-section {
+        &__inner {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &__slider {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &__slider-item-img {
+            max-width: 100%;
+            min-height: 360px;
+            margin: 0 auto;
+        }
+    }
+
+    .mobile-overflow {
+        min-width: 700px;
+    }
+
+    .tabs-wrapper {
+        overflow-x: scroll;
+    }
 }
+
 
 @media (max-width: 640px) {
     .header {
@@ -111,4 +153,62 @@
         }
     }
 
+    .banner-section {
+        margin-bottom: 40px;
+
+        .container {
+            padding: 0;
+        }
+
+        &__slider-item-img {
+            min-height: 200px;
+        }
+    }
+
+    .search {
+        &__content-form {
+            position: relative;
+        }
+
+        &__content-input {
+            font-size: 18px;
+            width: 100%;
+            padding: 15px 45px 15px 20px;
+            border-radius: 3px;
+            background-color: $bg;
+        }
+
+        &__content-btn {
+            position: absolute;
+            right: 0;
+            top: 13px;
+            width: 24px;
+            height: 24px;
+            font-size: 0;
+            padding: 17px;
+            margin-left: 0;
+            background-repeat: no-repeat;
+            background-image: url(../images/svgElements/search-icon.svg);
+            background-color: transparent;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .banner-section {
+        &__slider-item-img {
+            min-height: 164px;
+        }
+    }
+
+    .categories {
+        &__item {
+            width: 370px;
+            padding: 20px 10px 16px;
+        }
+
+        &__item-title {
+            font-size: 20px;
+        }
+    }
 }
